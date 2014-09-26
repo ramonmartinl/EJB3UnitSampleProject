@@ -63,6 +63,10 @@ public class AnnotatedFieldSessionBean implements IAnnotatedFieldSessionBean {
 		return this.mySessionBean;
 	}
 
+	public void seSessionBean(IMySessionBean mySessionBean) {
+		this.mySessionBean = mySessionBean;
+	}
+
 	/**
 	 * Operation which do somethig internal.
 	 */
