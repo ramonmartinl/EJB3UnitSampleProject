@@ -34,6 +34,6 @@ public interface IAnnotatedFieldSessionBean extends Serializable {
 	 * 
 	 * @return reference to a other sb.
 	 */
-	IMySessionBean getSessionBean();
+	IMySessionBean getMySessionBean();
 
 }

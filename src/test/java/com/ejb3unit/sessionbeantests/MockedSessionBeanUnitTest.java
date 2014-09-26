@@ -80,7 +80,7 @@ public class MockedSessionBeanUnitTest extends
 		Mockery context = new Mockery();
 		final IMySessionBean mockMySessionBean = context.mock(IMySessionBean.class);
 		assertNotNull(mockMySessionBean);
-		sUT.seSessionBean(mockMySessionBean);
+		sUT.setMySessionBean(mockMySessionBean);
 		
 		final DataSource ds = new MockedDataSource();
 		// instrument mock

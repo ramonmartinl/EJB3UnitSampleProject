@@ -59,11 +59,11 @@ public class AnnotatedFieldSessionBean implements IAnnotatedFieldSessionBean {
 	 * @see com.bm.data.bo.IAnnotatedFieldSessionBean#getSessionBean()
 	 * @return the injected session bean.
 	 */
-	public IMySessionBean getSessionBean() {
+	public IMySessionBean getMySessionBean() {
 		return this.mySessionBean;
 	}
 
-	public void seSessionBean(IMySessionBean mySessionBean) {
+	public void setMySessionBean(IMySessionBean mySessionBean) {
 		this.mySessionBean = mySessionBean;
 	}
 
