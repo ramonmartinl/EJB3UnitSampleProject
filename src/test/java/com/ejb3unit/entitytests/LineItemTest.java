@@ -8,10 +8,10 @@ import com.ejb3unit.LineItem;
 import com.ejb3unit.Order;
 
 /**
- * This is an axample for fully automated entity bean testing. Beans are randomly
- * generated and written to an in momory database. Equals and hashcode
- * imlementations will be automatically checked. 
- * This test test a entity bean with property access and a N:1 releation.
+ * This is an example for fully automated entity bean testing. Beans are randomly
+ * generated and written to an in memory database. Equals and hashcode
+ * implementations will be automatically checked. 
+ * This test tests an entity bean with property access and a N:1 releation.
  * 
  * @author Daniel Wiese
  * 

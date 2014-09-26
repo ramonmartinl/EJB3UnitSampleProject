@@ -35,7 +35,7 @@ public class DIFieldSessionBeanTest extends BaseSessionBeanFixture<MySessionBean
 	}
 
 	/**
-	 * Test the dpendency injection.
+	 * Test the dependency injection.
 	 * 
 	 * @author Daniel Wiese
 	 * @since 08.11.2005
@@ -43,12 +43,12 @@ public class DIFieldSessionBeanTest extends BaseSessionBeanFixture<MySessionBean
 	public void testDependencyInjection() {
 		final MySessionBean toTest = this.getBeanToTest();
 		assertNotNull(toTest);
-		assertNotNull(toTest.getDs());
-		assertNotNull(toTest.getEm());
+		assertNotNull(toTest.getDs()); //DataSource
+		assertNotNull(toTest.getEm()); //JPA EntityManager
 	}
 
 	/**
-	 * Test the dpendency injection.
+	 * Test the dependency injection.
 	 * 
 	 * @author Daniel Wiese
 	 * @since 08.11.2005
@@ -57,10 +57,10 @@ public class DIFieldSessionBeanTest extends BaseSessionBeanFixture<MySessionBean
 		final MySessionBean toTest = this.getBeanToTest();
 		assertNotNull(toTest);
 		List<StockWKNBo> back = toTest.getAllStocks();
-		assertNotNull(back);
-		assertEquals(188, back.size());
-		assertEquals(back.get(0), new StockWKNBo(1, "Das ist ein Name"));
-		assertEquals(back.get(1), new StockWKNBo(2, "Das ist ein andere Name"));
+		assertNotNull(back); //Returns a list
+		assertEquals(188, back.size()); //166 Records in .csv + 2 new lines
+		assertTrue(back.contains(new StockWKNBo(1, "Das ist ein Name")));
+		assertTrue(back.contains(new StockWKNBo(2, "Das ist ein andere Name")));
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class DIFieldSessionBeanTest extends BaseSessionBeanFixture<MySessionBean
 		}
 
 		/**
-		 * Creates the data.
+		 * Creates the new data.
 		 * 
 		 * @author Daniel Wiese
 		 * @since 17.04.2006

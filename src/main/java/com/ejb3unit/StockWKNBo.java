@@ -49,7 +49,7 @@ public class StockWKNBo implements Comparable, Serializable {
     @Column(name = "brancheCode", nullable = true, length = 4)
     private Integer branchenCode;
 
-    @Column(name = "brancheName", nullable = true, length = 16)
+    @Column(name = "brancheName", nullable = true, length = 255)
     private String branche;
 
     @Column(name = "transaktionenTag", nullable = true)
