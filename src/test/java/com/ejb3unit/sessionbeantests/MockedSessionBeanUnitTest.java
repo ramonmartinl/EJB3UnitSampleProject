@@ -3,17 +3,14 @@ package com.ejb3unit.sessionbeantests;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.SQLFeatureNotSupportedException;
-import java.util.logging.Logger;
 
 import javax.sql.DataSource;
 
-import org.jmock.Expectations;
-import org.jmock.Mockery;
+import org.jmock.Mock;
 
 import com.bm.testsuite.mocked.MockedSessionBeanFixture;
-import com.ejb3unit.AnnotatedFieldSessionBean;
 import com.ejb3unit.IMySessionBean;
+import com.ejb3unit.AnnotatedFieldSessionBean;
 
 /**
  * Testcase for testng session beans as mocked objects.
@@ -57,11 +54,6 @@ public class MockedSessionBeanUnitTest extends
 		public <T> T unwrap(Class<T> arg0) throws SQLException {
 			return null;
 		}
-
-		public Logger getParentLogger() throws SQLFeatureNotSupportedException {
-			// TODO Auto-generated method stub
-			return null;
-		}
 	}
 
 	/**
@@ -77,17 +69,12 @@ public class MockedSessionBeanUnitTest extends
 	public void test_executeOperation() {
 		AnnotatedFieldSessionBean toTest = this.getBeanToTest();
 		assertNotNull(toTest);
-		Mockery context = new Mockery();
-		final IMySessionBean mySessionBean = context.mock(IMySessionBean.class);
-//		final Mock mySessionBean = this.getMockControl(IMySessionBean.class);
+		final Mock mySessionBean = this.getMockControl(IMySessionBean.class);
 		assertNotNull(mySessionBean);
 
 		final DataSource ds = new MockedDataSource();
 		// instrument mock
-//		mySessionBean.expects(once()).method("getDs").will(returnValue(ds));
-		context.checking(new Expectations() {{
-		    one (mySessionBean).getDs(); will(returnValue(ds));
-		}});
+		mySessionBean.expects(once()).method("getDs").will(returnValue(ds));
 
 		// call the expected operation
 		toTest.executeOperation();
