@@ -1,0 +1,12 @@
+HOW TO SETUP THIS EXAMPLE PROJECT
+
+- Download Eclipse 3.2 or newer (maybe older version is also working)
+ -Install maven 2.0.x on your computer (http://maven.apache.org/)
+- Download the maven eclipse pugin for your convinience (Help/Software Updates/Find and Install../search for new features to install...)
+  add a new update site: http://m2eclipse.codehaus.org/
+  
+  or execute mvn eclipse:eclipse if you don't like to download the eclipse plugin
+
+Import this project to your workspace
+READY TO GO
+
