@@ -21,8 +21,7 @@ import com.ejb3unit.IMySessionBean;
  * @author Daniel Wiese 
  * 
  */
-public class MockedSessionBeanUnitTest extends
-		MockedSessionBeanFixture<AnnotatedFieldSessionBean> {
+public class MockedSessionBeanUnitTest extends MockedSessionBeanFixture<AnnotatedFieldSessionBean> {
 
 	private static final class MockedDataSource implements DataSource {
 		public Connection getConnection() throws SQLException {

@@ -46,6 +46,11 @@
 	        <artifactId>slf4j-log4j12</artifactId>
 	        <version>1.5.2</version>
 	    </dependency>
+	    <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.1-901-1.jdbc4</version>
+        </dependency>
 	</dependencies>
 	<scm>
 		<url>http://svn.sourceforge.net/viewcvs.cgi/ejb3unit/trunk/Ejb3UnitSampleProject</url>
