@@ -13,8 +13,7 @@ import com.ejb3unit.StockWKNBo;
  * 
  * @author Daniel Wiese
  */
-public class DIMethodSessionBeanTest extends
-		BaseSessionBeanFixture<AnnotatedMethodsSessionBean> {
+public class DIMethodSessionBeanTest extends BaseSessionBeanFixture<AnnotatedMethodsSessionBean> {
 
 	private static final Class[] usedBeans = { StockWKNBo.class };
 
