@@ -18,7 +18,7 @@ import com.ejb3unit.IMySessionBean;
 /**
  * Testcase for testng session beans as mocked objects.
  * 
- * @author Daniel Wiese
+ * @author Daniel Wiese 
  * 
  */
 public class MockedSessionBeanUnitTest extends
